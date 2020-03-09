@@ -6,7 +6,7 @@
 </style>
 </head>
 <body>
-	<div id="engineName" style="text-align: center; width: 100px; height: 20px; background-color: blue; color:white; font-size:10pt">
+	<div id="engineName" style="text-align: center; width: 200px; height: 40px; background-color:#4285F4; color:white; font-size:20pt">
 		Google
 	</div>
 	<form id="searchBar" style="float:left" method="get" action="http://www.google.com/search">
@@ -18,12 +18,24 @@
 	<script>
 		function keyPress() {
 		    var keyInput = document.getElementById("input").value;
-		    if(keyInput == "SO"){
+		    if(keyInput == "so"){
 		    	document.getElementById("engineName").innerHTML = "Stack Overflow";
 		    	document.getElementById("engineName").style.backgroundColor = "#f48737";
 		    	document.getElementById("input").value = ""
 		    	document.getElementById("searchBar").action = "http://www.stackoverflow.com/search";
+		    }
+		    if(keyInput == "git repo"){
+		    	document.getElementById("engineName").innerHTML = "Git Repo";
+		    	document.getElementById("engineName").style.backgroundColor = "#24292E";
+		    	document.getElementById("input").value = ""
+		    	document.getElementById("searchBar").action = "https://github.com/AdenaBauer/";
+		    }
 
+		   	if(keyInput == "python"){
+		    	document.getElementById("engineName").innerHTML = "Python Reference";
+		    	document.getElementById("engineName").style.backgroundColor = "#244D70";
+		    	document.getElementById("input").value = ""
+		    	document.getElementById("searchBar").action = "https://docs.python.org/3/search.html";
 		    }
 	    }
 
